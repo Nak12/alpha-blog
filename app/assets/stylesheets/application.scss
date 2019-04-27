@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body{
-  background-color:  #a7a7a7;
+  background-color:  #e7e7e7;
 }
 
 .navbar{
@@ -51,8 +51,7 @@ body{
 footer{
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #464646;
+  border-top: 1px solid #585858;
 }
 footer a:hover{
   color: #222;
@@ -68,6 +67,31 @@ footer ul li{
   float: left;
   margin-left: 15px;
 }
+
+.title_form{
+  margin-top: 25px;
+}
+
+.article-actions{
+  border-top: 1px solid #585858;
+  padding-top: 5px;
+}
+.title_show{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.article-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.article-body{
+ 
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
 /*
 #logo{
   float: left;
