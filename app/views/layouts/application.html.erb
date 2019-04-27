@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
     <title>AlphaBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +13,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>  
+    </div>  
+   <%= render 'layouts/footer' %>
   </body>
 </html>

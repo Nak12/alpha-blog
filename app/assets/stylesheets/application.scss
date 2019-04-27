@@ -1,0 +1,81 @@
+@import "bootstrap";
+
+body{
+  background-color:  #a7a7a7;
+}
+
+.navbar{
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  //font-size: 3rem;
+}
+
+.navbar-brand{
+  float: left;
+  font-size: 1.7em;
+  text-transform: uppercase; 
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.navbar-nav{
+  font-size: 1.4em;
+}
+.nav-link:hover{
+  color: #1772c2 !important;
+}
+
+.jumbotron{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: black;
+  background-image: url('programming.png');
+  background-size: cover;
+  height: 600px;
+}
+
+#title{
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  margin-top: -40px;
+}
+
+.btn-xlarge{
+  font-size: 1.7em;
+  background-color: #dd5252;
+}   
+
+footer{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #464646;
+}
+footer a:hover{
+  color: #222;
+}
+footer small{
+  float: left;
+}
+footer ul{
+  float: right;
+  list-style: none;
+} 
+footer ul li{
+  float: left;
+  margin-left: 15px;
+}
+/*
+#logo{
+  float: left;
+  font-size: 1.7em;
+  text-transform: uppercase; 
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #fff;
+}*/
+
+
