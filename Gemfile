@@ -6,7 +6,13 @@ ruby '2.6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
+#para password
 gem 'bcrypt', '~> 3.1.7'
+
+#pagiation
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap4'
+
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'

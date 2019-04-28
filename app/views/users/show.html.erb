@@ -5,7 +5,8 @@
   <div class="col text-center">
     <%= gravatar_for @user, size: 120%>
     <h4><%= @user.username%>'s articles</h4>
-    <%= render 'shared/article', obj: @user.articles %>
+    <%= render 'shared/article', obj: @user_articles %> <!--itera sobre cada artigo de um determinado usuário-->
+    <%= will_paginate @user_articles %>
   </div>
 </div>
 
