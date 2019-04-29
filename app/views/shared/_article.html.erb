@@ -21,8 +21,8 @@
           </div>
         </div>
 
-        <!--só vamos dar permissão de deletar e editar um artigo se o usuário estiver logado e for o autor do artigo-->
-        <% if logged_in? && current_user == article.user %>
+        <!--só vamos dar permissão de deletar e editar um artigo se o usuário estiver logado e for o autor do artigo ou se for admin-->
+        <% if logged_in? && (current_user == article.user || current_user.admin?) %>
           <div class="card-footer">
             <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure you want to delete the article?"},  class: "btn btn-sm btn-danger" %> |  <%= link_to 'Edit', edit_article_path(article), class: "btn btn-sm btn-primary" %>
           </div>
