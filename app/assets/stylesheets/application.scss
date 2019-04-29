@@ -11,6 +11,11 @@ h1{
   margin-top: 25px;
 }
 
+h4{
+  font-family: 'Fira Sans', sans-serif;
+  color: #00637c;
+}
+
 .buttons{
   text-align: center;
   font-family: 'Fira Sans', sans-serif;
@@ -60,7 +65,7 @@ h1{
 .btn-xlarge{
   font-size: 1.7em;
   background-color: #dd5252;
-}   
+} 
 
 footer{
   margin-top: 45px;
@@ -117,10 +122,7 @@ footer ul li{
 .view_user{
   text-align: center;
 }
-.view_user h4{
-  font-family: 'Fira Sans', sans-serif;
-  color: #00637c;
-}
+
 /*
 #logo{
   float: left;

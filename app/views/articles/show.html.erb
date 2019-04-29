@@ -1,16 +1,16 @@
 
 
 <h2 class="title_show"><%= @article.title %></h2>
-  <div class="col col-xs-4">
+  <div class="col-sm-12">
 
     <!--mostra o usuário, se não existir só mostrar o artigo mesmo-->
     <% if @article.user %>
       <ul class="listing">
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-12 text-center">
             <li>Created by:</li>
             <li><%= link_to gravatar_for(@article.user, size: 100), user_path(@article.user) %></li>
-            <li class="article-title"><%= link_to @article.user.username, user_path(@article.user) %></li>
+            <li><h4><%= link_to @article.user.username, user_path(@article.user) %></h4></li>
             <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
           </div>
         </div>
