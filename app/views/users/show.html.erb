@@ -1,14 +1,18 @@
 
-<h1 class="title-user-page">Welcome to: <%= @user.username %>'s page</h1>
+
 
 <div class="row">
-  <div class="col text-center">
-    <%= gravatar_for @user, size: 120%>
-    <h4><%= @user.username%>'s articles</h4>
-    <%= render 'shared/article', obj: @user_articles %> <!--itera sobre cada artigo de um determinado usuário-->
-    <%= will_paginate @user_articles %>
+  <div class="col-sm-12">
+    <h1>Welcome to: <%= @user.username %>'s page</h1> 
+     <div class="view_user">
+        <%= gravatar_for @user, size: 120%>
+        <h4><%= @user.username%>'s articles</h4><br>
+        <%= render 'shared/article', obj: @user_articles %> <!--itera sobre cada artigo de um determinado usuário-->
+        <%= will_paginate @user_articles %>
+    </div> 
   </div>
 </div>
+
 
 
 

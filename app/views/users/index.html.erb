@@ -1,7 +1,7 @@
-<h1 class="title-user-page">All Alpha Bloggers</h1>
-
- 
-  <% @users.each do |user| %>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>All Alpha Bloggers</h1>
+     <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">
         <div class="card col-md-4 text-center">
@@ -11,7 +11,7 @@
 
           <!--se for admin pode deletar qualquer usuário-->
           <% if logged_in? and current_user.admin? %>
-            <li><%= link_to "Delete this user", user_path(user), method: :delete, data: {confirm: "Are you sure you want delete the user and all their articles?"}, class: "btn btn-danger" %></li>
+            <li><%= link_to "Delete this user", user_path(user), method: :delete, data: {confirm: "Are you sure you want delete the user and all their articles?"}, class: "btn btn-danger btn-sm" %></li>
           <% end %>
           
         </div>
@@ -19,4 +19,10 @@
     </ul>
   <% end %>
   <%= will_paginate %>
+  </div>
+</div>
+
+
+ 
+ 
 
