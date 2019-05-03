@@ -1,10 +1,9 @@
-<h1>Show category</h1>
-
+<h1><%= "Category: " + @category.name %></h1>
 <div class="row">
   <div class="col-sm-12">
-
-    <h2>*<%= @category.name%></h2>
-    
-    
+    <%= render 'shared/article', obj: @category_articles %>
   </div>
 </div>
+
+ <!--irá paginar todos os artigos da categoria atual-->
+<%= will_paginate @category_articles %>

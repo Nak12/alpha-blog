@@ -20,6 +20,11 @@
     <hr>
     <%= simple_format(@article.description) %>
 
+    <!--mostra as categorias se tiver-->
+    <% if @article.categories.any? %>
+      <p>Categories: <%= render @article.categories %></p> <!-- não precisa do .each para mostrar todos, faz isso automaticamente pois retornará um array-->
+    <% end %>
+
     <div class="article-actions">
       <!--só vamos dar permissão de deletar e editar um artigo se o usuário estiver logado e for o autor do artigo ou se for admin-->
       <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
