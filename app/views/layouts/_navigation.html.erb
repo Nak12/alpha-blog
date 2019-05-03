@@ -20,11 +20,26 @@
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to 'New Article', new_article_path, class: "dropdown-item" %>
-          </div>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'New Article', new_article_path, class: "dropdown-item" %></li>
+          </ul>  
         </li>
       <% end %>
+
+      <!--Categories-->
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+        <ul class="dropdown-menu">
+
+          <li><%= link_to 'All Categories', categories_path, class: "dropdown-item" %></li>
+          <% Category.all.each do |category| %>
+            <li><%= link_to "#{category.name}", category_path(category), class: "dropdown-item" %></li>
+          <% end %>
+          <% if logged_in? and current_user.admin? %>
+            <li><%= link_to 'New Category', new_category_path, class: "dropdown-item" %></li>
+          <% end %>
+        </ul>  
+      </li>
 
     </ul>
 
