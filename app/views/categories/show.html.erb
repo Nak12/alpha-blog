@@ -1,6 +1,16 @@
 <h1><%= "Category: " + @category.name %></h1>
 <div class="row">
   <div class="col-sm-12">
+
+    <!-- mostra a opção de editar categoria somente para admin-->
+    <% if logged_in? and current_user.admin? %>
+      <div class="row">
+        <span class="badge"><%= link_to 'Edit category name', edit_category_path(@category) %></span>
+      </div>
+    <% end %>
+   
+    <br>
+
     <%= render 'shared/article', obj: @category_articles %>
   </div>
 </div>
